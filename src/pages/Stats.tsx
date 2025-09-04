@@ -1,21 +1,16 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
-import UrlShortenerForm from '@/components/UrlShortenerForm';
-import UrlList from '@/components/UrlList';
+import StatsDashboard from '@/components/StatsDashboard';
 
-const Index = () => {
+const Stats: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-accent/10 to-primary/5 p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto">
         <Navigation />
-        
-        <div className="space-y-8">
-          <UrlShortenerForm />
-          <UrlList />
-        </div>
+        <StatsDashboard />
       </div>
     </div>
   );
 };
 
-export default Index;
+export default Stats;
