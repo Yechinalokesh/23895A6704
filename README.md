@@ -101,5 +101,5 @@ Custom shortcodes must be unique; system generates unique shortcodes automatical
 
 Click source and geo-location are simulated.
 
-App runs exclusively on http://localhost:3000
+
 .
