@@ -1,73 +1,105 @@
-# Welcome to your Lovable project
+React URL Shortener App
 
-## Project info
+Font Recommendation: Times New Roman
 
-**URL**: https://lovable.dev/projects/3e07c481-71e1-4ce1-967d-6eb62c3ccad9
+Overview:
+This is a React-based URL Shortener Web Application built using Material UI. It allows users to shorten multiple URLs concurrently, track statistics, and handle redirection—all on the client side using localStorage for persistence.
 
-## How can I edit this code?
+Features:
 
-There are several ways of editing your application.
+URL Shortener Page
 
-**Use Lovable**
+Shorten up to 5 URLs at once.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3e07c481-71e1-4ce1-967d-6eb62c3ccad9) and start prompting.
+Optional validity period (default: 30 minutes).
 
-Changes made via Lovable will be committed automatically to this repo.
+Optional custom shortcode (alphanumeric, must be unique).
 
-**Use your preferred IDE**
+Client-side validation for URLs, shortcodes, and validity.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Displays shortened URLs with expiry date.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Statistics Page
 
-Follow these steps:
+Displays all shortened URLs.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Shows creation and expiry date, total clicks.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Detailed click data including timestamp, source, and simulated geo-location.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Redirection
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Accessing a shortened URL redirects to the original URL.
 
-**Edit a file directly in GitHub**
+Clicks are recorded for statistics.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Logging
 
-**Use GitHub Codespaces**
+Custom logging middleware stores logs in localStorage.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Error Handling
 
-## What technologies are used for this project?
+Graceful error messages for invalid input, shortcode collision, and redirection errors.
 
-This project is built with:
+Technology Stack:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Frontend: React
 
-## How can I deploy this project?
+Styling: Material UI
 
-Simply open [Lovable](https://lovable.dev/projects/3e07c481-71e1-4ce1-967d-6eb62c3ccad9) and click on Share -> Publish.
+Routing: React Router
 
-## Can I connect a custom domain to my Lovable project?
+Persistence: localStorage
 
-Yes, you can!
+Logging: Custom logging middleware
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Installation & Running:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Clone the repository from GitHub: https://github.com/Yechinalokesh/23895A6704
+
+Navigate to the project folder.
+
+Install dependencies by running npm install.
+
+Start the application by running npm start.
+
+Open http://localhost:3000
+ in your browser.
+
+Project Structure:
+
+src/components/UrlShortenerPage.jsx
+
+src/components/StatisticsPage.jsx
+
+src/components/LoggingMiddleware.js
+
+src/services/UrlService.js
+
+App.jsx
+
+index.js
+
+Data Model:
+Each shortened URL is stored as an object containing:
+
+originalUrl
+
+shortcode
+
+validity (in minutes)
+
+createdAt and expiryAt timestamps
+
+clicks (array of objects with timestamp, source, and geo-location)
+
+Assumptions:
+
+Users are pre-authorized; no authentication is needed.
+
+Custom shortcodes must be unique; system generates unique shortcodes automatically.
+
+Click source and geo-location are simulated.
+
+App runs exclusively on http://localhost:3000
+.
