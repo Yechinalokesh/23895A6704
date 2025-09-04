@@ -1,105 +1,41 @@
-React URL Shortener App
+# React URL Shortener App – Lovable Preview
 
-Font Recommendation: Times New Roman
+You can preview the **React URL Shortener App** using the following link, mapped locally as `localhost:3000`:
 
-Overview:
-This is a React-based URL Shortener Web Application built using Material UI. It allows users to shorten multiple URLs concurrently, track statistics, and handle redirection—all on the client side using localStorage for persistence.
+[Open App on Localhost](http://localhost:3000)
 
-Features:
+**Original Preview Link:**  
+[https://preview--snaplink-shorten-share.lovable.app/](https://preview--snaplink-shorten-share.lovable.app/)
 
-URL Shortener Page
+---
 
-Shorten up to 5 URLs at once.
+## Overview
+This is a **React-based URL Shortener Web Application** built with **Material UI**. It allows you to:  
+- Shorten multiple URLs at once  
+- Set optional validity periods and custom shortcodes  
+- Track URL clicks and statistics  
+- Redirect from short URLs to original URLs  
 
-Optional validity period (default: 30 minutes).
+All functionality is fully client-side and uses **localStorage** for persistence.
 
-Optional custom shortcode (alphanumeric, must be unique).
+---
 
-Client-side validation for URLs, shortcodes, and validity.
+## Usage
+1. Open the app on [Localhost](http://localhost:3000) (maps to Lovable preview).  
+2. Enter up to 5 URLs in the form.  
+3. Optionally provide a validity period (minutes) and/or custom shortcode.  
+4. Submit to generate shortened URLs.  
+5. Check the **Statistics Page** for click counts and details.  
 
-Displays shortened URLs with expiry date.
+---
 
-Statistics Page
+## Technology Stack
+- **React** – Frontend framework  
+- **Material UI** – Styling  
+- **React Router** – Routing and redirection  
+- **localStorage** – Client-side persistence  
+- **Custom Logging Middleware** – Event logging  
 
-Displays all shortened URLs.
+---
 
-Shows creation and expiry date, total clicks.
-
-Detailed click data including timestamp, source, and simulated geo-location.
-
-Redirection
-
-Accessing a shortened URL redirects to the original URL.
-
-Clicks are recorded for statistics.
-
-Logging
-
-Custom logging middleware stores logs in localStorage.
-
-Error Handling
-
-Graceful error messages for invalid input, shortcode collision, and redirection errors.
-
-Technology Stack:
-
-Frontend: React
-
-Styling: Material UI
-
-Routing: React Router
-
-Persistence: localStorage
-
-Logging: Custom logging middleware
-
-Installation & Running:
-
-Clone the repository from GitHub: https://github.com/Yechinalokesh/23895A6704
-
-Navigate to the project folder.
-
-Install dependencies by running npm install.
-
-Start the application by running npm start.
-
-Open http://localhost:3000
- in your browser.
-
-Project Structure:
-
-src/components/UrlShortenerPage.jsx
-
-src/components/StatisticsPage.jsx
-
-src/components/LoggingMiddleware.js
-
-src/services/UrlService.js
-
-App.jsx
-
-index.js
-
-Data Model:
-Each shortened URL is stored as an object containing:
-
-originalUrl
-
-shortcode
-
-validity (in minutes)
-
-createdAt and expiryAt timestamps
-
-clicks (array of objects with timestamp, source, and geo-location)
-
-Assumptions:
-
-Users are pre-authorized; no authentication is needed.
-
-Custom shortcodes must be unique; system generates unique shortcodes automatically.
-
-Click source and geo-location are simulated.
-
-
-.
+**Note:** The app runs locally on `http://localhost:3000`, simulating the Lovable preview.
