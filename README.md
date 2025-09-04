@@ -1,4 +1,4 @@
-You can preview the React URL Shortener App locally at: http://localhost:3000
+You can preview the React URL Shortener App locally at: [http://localhost:3000](https://tinyurl.com/5jbahvv9)
 
 Overview:
 This is a React-based URL Shortener Web Application built with Material UI. It allows you to:
