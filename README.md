@@ -1,5 +1,3 @@
-React URL Shortener App
-
 You can preview the React URL Shortener App locally at: http://localhost:3000
 
 Overview:
@@ -39,4 +37,5 @@ localStorage – Client-side persistence
 
 Custom Logging Middleware – Event logging
 
-Note: The app is designed to run locally on http://localhost:3000
+Note: The app is designed to run locally at http://localhost:3000
+, which is a placeholder for the Lovable preview link.
